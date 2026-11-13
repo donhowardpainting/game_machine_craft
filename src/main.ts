@@ -187,7 +187,7 @@ async function boot() {
   canvas.addEventListener('pointerdown', unlockAudio);
 
   // Debug / test hook
-  (window as any).__mc = { ctx, mech, world, items, player, ui, builder, pw: () => pw, spawnRover, simulate, saveGame, renderer, RAPIER,
+  (window as any).__mc = { ctx, mech, world, items, player, ui, builder, pw: () => pw, spawnRover, simulate, saveGame, renderer, RAPIER, input,
     step(n: number) { for (let i = 0; i < n; i++) { ctx.now += STEP; simulate(STEP); pw.step(); if (i % 6 === 0) items.update(STEP * 6); } mech.sync(); } };
 }
 

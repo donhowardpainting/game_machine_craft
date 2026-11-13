@@ -432,7 +432,7 @@ export class UI {
       this.v.project(cam);
       if (this.v.z > 1 || dist < 7) { el.hidden = true; return; }
       el.hidden = false;
-      const sx = Math.min(w - 40, Math.max(40, (this.v.x * 0.5 + 0.5) * w)), sy = Math.min(h - 120, Math.max(70, (-this.v.y * 0.5 + 0.5) * h));
+      const sx = Math.min(w - 40, Math.max(40, (this.v.x * 0.5 + 0.5) * w)), sy = Math.min(h - 120, Math.max(150, (-this.v.y * 0.5 + 0.5) * h));
       el.style.transform = `translate(${sx}px, ${sy}px) translate(-50%, -50%)`;
       el.style.setProperty('--c', p.color);
       const txt = `${p.label} · ${Math.round(dist)} m`;

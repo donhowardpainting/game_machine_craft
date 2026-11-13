@@ -170,7 +170,7 @@ export class Sky {
     this.sun.target.position.copy(cam);
     this.sun.color.copy(this.sunColor);
     this.sun.intensity = inten;
-    this.hemi.intensity = amb;
+    this.hemi.intensity = amb * 1.35;
     this.hemi.color.copy(this.zenith).lerp(this.horizon, 0.6);
     this.hemi.groundColor.set(0x6b5a48).lerp(this.horizon, 0.3);
     this.uni.uZenith.value.copy(this.zenith); this.uni.uHorizon.value.copy(this.horizon);
